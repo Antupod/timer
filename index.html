@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <title>~Timer~</title>
+</head>
+
+<body id="bodyColor">
+    <!-- Background and clouds for a daytime theme -->
+    <div class="backdropSun" id="backdropSun">
+        <div class="cloud">
+            <img src="image/evening/cloud-1.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-3.png" width="100" height="100">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-1.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-4.png" width="100" height="100">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-3.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-1.png" width="100" height="100">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-3.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-1.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-1.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-3.png" width="100" height="100">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-3.png" width="80" height="80">
+        </div>
+        <div class="cloud">
+            <img src="image/evening/cloud-4.png" width="100" height="100">
+        </div>
+    </div> 
+    <!-- Night theme background -->  
+    <div class="backdropNight">
+        <div class="skyNight" id="skyNight"></div>
+    </div>
+    <!-- the user enters the time here -->
+    <div class="container-form">
+        <form name="timer-form" class="timer-form" id="timer-form" autocomplete="off">
+            <input class="form-input" type="text" placeholder="00" maxlength="2" id="hours" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+            <input class="form-input" type="text" placeholder="00" maxlength="2" id="minutes" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+            <input class="form-input" type="text" placeholder="00" maxlength="2" id="seconds" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+            <button class="form-button" name="form-button" id="start" type='button'>Start</button>
+        </form>
+        <!-- icons for changing themes --> 
+        <div class="themes" id="themes">
+            <img id="moon" class="active" src="image/menuIcon/moon.svg" width="40" height="40">
+            <img id="sun" class="notActive" src="image/menuIcon/sun.svg" width="40" height="40">
+        </div>
+    </div>
+
+    <!-- the time output is carried out here -->
+    <div class="timer-watch" id="timerWatch">
+        <div class="timer-inner" id="timerInner">
+            <div class="timer-hours" id="time-hours">00</div>
+            <span class="timer-colon">:</span>
+            <div class="timer-minutes" id="time-minutes">00</div>
+            <span class="timer-colon">:</span>
+            <div class="timer-seconds" id="time-seconds">00</div>
+        </div>
+
+        <!-- timer stop icon -->
+        <div class="stop" id="stopTimer">
+            <img src="image/menuIcon/stop.svg" class="menu-icon" width="50" height="50">
+        </div>
+    </div>
+   
+    <!-- connecting JS functions -->
+    <script src="js/timer.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/themes.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+body {
+    background: linear-gradient(45deg, #ffd95e, #ff9090);
+    
+	background-size: 170% 170%;
+
+    font-size: 10px;
+    overflow: hidden;
+    font-family: 'Supermercado One', cursive;
+
+    user-select: none;
+}
+
+.form-input::placeholder {
+    color: #db7093;
+}
+
+/* Background and clouds */
+
+.backdropSun, 
+.backdropNight { 
+    position: relative; 
+}
+
+.cloud, 
+.star, 
+.moon { 
+    position: absolute; 
+}
+
+/* the user enters the time here */
+.container-form{
+    width: 30em;
+    height: 15em;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.timer-form {
+    display: flex;
+    justify-content: space-around;
+
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form-input {
+    display: block;
+
+    text-align: center;
+    font-size: 3em;
+
+    border: none;
+    border-bottom: 5px solid rgb(233, 115, 198);
+    border-radius: 30%;
+    background: #fad2c0;
+    color: #fa2cde;
+    
+    width: 2em;
+    height: 2em;
+
+    outline: none;
+}
+
+.form-button {
+    font-family: 'Supermercado One', cursive;
+
+    width: 5em;
+    height: 2em;
+    margin: 0;
+
+    font-size: 2em;
+
+    cursor: pointer;
+
+    background: none;
+    border: none;
+
+    color: #eb417a;
+    border-bottom: 2px solid rgb(248, 34, 141);
+
+    top: 4em;
+
+    position: absolute;
+}
+
+/* icons for changing themes */
+
+.themes {
+    position: absolute;
+    top: 0px;
+    right: -80px;
+
+    cursor: pointer;
+}
+
+#moon {
+    background: rgb(204, 110, 196);
+}
+
+#sun {
+    background: rgb(113, 138, 250);
+}
+
+#sun, 
+#moon {
+    padding: 10px;
+    border-radius: 30%;
+}
+
+
+/* the time output is carried out here */
+.timer-watch {
+    position: relative;
+
+    max-width: 40em;
+    width: 100%;
+    height: 40em;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background: #FFCCE1;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+
+.timer-inner {
+    max-width: 4em;
+    width: 100%;
+    margin: 0px auto;
+
+    color: rgb(226, 51, 197);
+    font-size: 8em;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*  timer stop icon */
+.stop {
+    width: 100px;
+    height: 100px;
+    
+    background: #FFCCE1;
+    border-radius: 50%;
+
+    position: absolute;
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+
+    top: 22em;
+    right: -55px;
+}
+
+.menu-icon { margin: 0 auto; }
+
+/* Class for displaying elements (interactions with JS) */
+
+
+.notActive {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.blocking {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -1,0 +1,133 @@
+/* Cloud  Fo Sun */
+.cloud:nth-child(1) {
+    top: 10px;
+    left: 100px;
+    animation: animate_cloud_sun 15s ease-out infinite;
+}
+
+.cloud:nth-child(2) {
+    top: 100px;
+    left: 400px;
+    animation: animate_cloud_sun 25s ease-out infinite;
+}
+
+.cloud:nth-child(3) {
+    top: 200px;
+    animation: animate_cloud_sun 20s ease-out infinite;
+}
+
+.cloud:nth-child(4) {
+    top: 300px;
+    left: 200px;
+    animation: animate_cloud_sun 30s ease-out infinite;
+}
+
+.cloud:nth-child(5) {
+    top: 430px;
+    left: 300px;
+    animation: animate_cloud_sun 25s ease-out infinite;
+}
+
+
+.cloud:nth-child(6) {
+    top: 450px;
+    right: 300px;
+    animation: animate_cloud_sun 15s ease-out infinite;
+}
+
+.cloud:nth-child(7) {
+    top: 500px;
+    right: 80px;
+
+    animation: animate_cloud_sun 25s ease-out infinite;
+}
+
+.cloud:nth-child(8) {
+    top: 330px;
+    right: 170px;
+
+    animation: animate_cloud_sun 20s ease-out infinite;
+}
+
+.cloud:nth-child(9) {
+    top: 400px;
+    left: 30px;
+
+    animation: animate_cloud_sun 25s ease-out infinite;
+}
+
+.cloud:nth-child(10) {
+    top: 200px;
+    right: 330px;
+
+    animation: animate_cloud_sun 20s ease-out infinite;
+}
+
+.cloud:nth-child(11) {
+    top: 0px;
+    right: 430px;
+
+    animation: animate_cloud_sun 25s ease-out infinite;
+}
+
+.cloud:nth-child(12) {
+    top: 10px;
+    right: 30px;
+
+    animation: animate_cloud_sun 15s ease-out infinite;
+}
+
+/* Animatic */
+
+@keyframes animate_cloud_sun {
+    0% {
+        transform: translate3d(50px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    25% {
+        transform: translate3d(70px, 10px, 0px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: translate3d(30px, 0px, 0px);
+    }
+
+    75% {
+        transform: translate3d(70px, 10px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(50px, 0px, 0px);
+        animation-timing-function: ease-out;
+    }
+}
+/* Star teme */
+
+.skyNight {
+    width: 3px;
+    height: 3px;
+
+    background: #fff;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:50%;
+
+    margin: 0 auto;
+    
+    transform-origin: 0 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+
+    animation: rotate 270s infinite linear;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
